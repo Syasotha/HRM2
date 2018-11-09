@@ -47,191 +47,77 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add External Applicants :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Internal Applicants :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Rejected candidates :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Selected candidates :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Candidates Reached Call:</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Candidates Not Reached Call :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
+                   <!-- Editable table -->
+<div class="card">
+   
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-2">
+          <a class="text-success" (click)="add()">
+            <!-- <span icon="plus" size="2x"></span> -->
+            <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0">Add</button>
+          </a>
+        </span>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Applicant Name</th>
+            <th class="text-center">Internal/External</th>
+            <th class="text-center">Selected/Rejected</th>
+            <th class="text-center">Reason</th>
+            <!-- <th class="text-center">City</th>
+            <th class="text-center">Sort</th> -->
+            <th class="text-center">Remove</th>
+          </tr>
+          <tr *ngFor="let person of personList; let id = index">
+            <td contenteditable="true" (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)"><input type="email" class="form-control" id="id1" name="name1" placeholder="Enter Applicant Name"></td>
+            <td contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)"><select class="form-control">
+                <option>Internal</option>
+                <option>External</option>
+              </select></td>
+            <td contenteditable="true" (keyup)="changeValue(id, 'companyName', $event)" (blur)="updateList(id, 'companyName', $event)"><select class="form-control">
+                <option>Selected</option>
+                <option>Rejected</option>
+              </select></td>
+            <td contenteditable="true" (keyup)="changeValue(id, 'country', $event)" (blur)="updateList(id, 'country', $event)"><textarea class="form-control" name="rejectReason" placeholder="Enter Reject Reason"></textarea></td>
+            <!-- <td contenteditable="true" (keyup)="changeValue(id, 'city', $event)" (blur)="updateList(id, 'city', $event)">{{person.city}}</td> -->
+            <!-- <td>
+              <span class="table-up">
+                <a class="indigo-text">
+                  <span icon="long-arrow-up"></span>
+                </a>
+              </span>
+              <span class="table-down">
+                <a class="indigo-text">
+                  <span icon="long-arrow-down"></span>
+                </a>
+              </span>
+            </td> -->
+            <td>
+              <span class="table-remove">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Editable table -->
+              </fieldset>
                   &nbsp;
-                  <fieldset>
-                    <legend>Interview Panel Details</legend>
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <div class="form-group">
-                          <!-- <label for="position"> 	Age of Retirement </label> -->
-                          <label for="digit-salry">Interview Panale Number:</label>
-                          <input type="text" class="form-control" name="name" id="name">
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="form-group">
-                          <label for="digit-salry">Date:</label> &nbsp;
-                          <input type="date" class="form-control" name="given-date" id="given-date" placeholder="yyyy-mm-dd">
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="form-group">
-                          <label for="position"> Strating Time:</label>
-                          <input type="time" class="form-control" name="position" id="position">
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="form-group">
-                          <label for="position"> End Time:</label>
-                          <input type="time" class="form-control" name="position" id="position">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Interviewers :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add candidates list per panel:</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Attended Candidate for Interview:</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-                    </div>
-                    &nbsp;
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Absentees Candidate for Interview:</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-                        </div>
-                      </div>
-
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Rejected candidate from interview :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-
-                        </div>
-                      </div>
-
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Final Selected Candidates:</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-
-                        </div>
-                      </div>
-                    </div>
-                      
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Interview score cards :</label>
-                          &nbsp;
-                          <label for="file-upload" class="custom-file-upload btn-info">
-                            <i class="fa fa-cloud-upload"></i>Upload</label>
-                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
-                            placeholder="Awards & Citations">
-
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
-
+                
                 </div>
                 <!-- card body end -->
 
                 <div class="card-footer">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal"
-                    [routerLink]="['/agrementletter']">ADD</button>
+                    data-target="#addapplicantmodal">ADD</button>
 
                   &nbsp;
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Reset</button>
                 </div>
               </form>
               <!-- form end -->
-
 
             </div>
           </div>
@@ -243,3 +129,5 @@
     </div>
   </div>
 </div>
+
+

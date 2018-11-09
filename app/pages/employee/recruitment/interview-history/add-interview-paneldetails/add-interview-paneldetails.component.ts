@@ -1,12 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-interview-history',
-  templateUrl: './interview-history.component.html',
-  styleUrls: ['./interview-history.component.css']
+  selector: 'app-add-interview-paneldetails',
+  templateUrl: './add-interview-paneldetails.component.html',
+  styleUrls: ['./add-interview-paneldetails.component.css']
 })
-export class InterviewHistoryComponent implements OnInit {
+export class AddInterviewPaneldetailsComponent implements OnInit {
   ngOnInit(): void {
     throw new Error("Method not implemented.");
   }
@@ -50,4 +49,5 @@ export class InterviewHistoryComponent implements OnInit {
     this.editField = event.target.textContent;
   }
  
+
 }

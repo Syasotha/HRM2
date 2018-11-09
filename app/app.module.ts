@@ -63,6 +63,9 @@ import { SelfServiceComponent } from './pages/employee/self-service/self-service
 import { InterviewHistoryComponent } from './pages/employee/recruitment/interview-history/interview-history.component';
 import { AddApplicantsComponent } from './pages/employee/recruitment/interview-history/Models/add-applicants/add-applicants.component';
 import { RejectApplicantsComponent } from './pages/employee/recruitment/interview-history/Models/reject-applicants/reject-applicants.component';
+import { AddInterviewersComponent } from './pages/employee/recruitment/interview-history/Models/add-interviwers/add-interviewers.component';
+import { TableEditableComponent } from './pages/employee/recruitment/table-editable/table-editable.component';
+import { AddInterviewPaneldetailsComponent } from './pages/employee/recruitment/interview-history/add-interview-paneldetails/add-interview-paneldetails.component';
 
 @NgModule({
   declarations: [
@@ -122,7 +125,10 @@ import { RejectApplicantsComponent } from './pages/employee/recruitment/intervie
     SelfServiceComponent,
     InterviewHistoryComponent,
     AddApplicantsComponent,
-    RejectApplicantsComponent
+    RejectApplicantsComponent,
+    AddInterviewersComponent,
+    TableEditableComponent,
+    AddInterviewPaneldetailsComponent
   ],
   imports: [
     BrowserModule,
