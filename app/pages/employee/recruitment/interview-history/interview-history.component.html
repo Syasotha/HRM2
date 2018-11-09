@@ -28,53 +28,83 @@
 
                 <!-- card body start -->
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label for="name">Job Title</label>
-                        <select class="form-control">
-                          <option>QA</option>
-                          <option>Software Developer</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label for="name">Job Reference Number</label>
-                        <input type="text" class="form-control" name="name" id="name">
-                      </div>
-                    </div>
-                  </div>
                   <fieldset>
-                    <legend>Add Interview Candidates Details</legend>
+                    <legend>Add Interview Details</legend>
                     <div class="row">
-                      <div class="col-sm-3">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="name">Job Title</label>
+                          <select class="form-control">
+                            <option>QA</option>
+                            <option>Software Developer</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="name">Job Reference Number</label>
+                          <input type="text" class="form-control" name="name" id="name" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <label for="name">Add External Applicants :</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
-                      <div class="col-sm-3">
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <label for="name">Add Internal Applicants :</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
-                      <div class="col-sm-3">
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <label for="name">Add Rejected candidates :</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
-
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
-                      <div class="col-sm-3">
+
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <label for="name">Add Selected candidates :</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <label for="name">Add Candidates Reached Call:</label>
+                          &nbsp;
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <label for="name">Add Candidates Not Reached Call :</label>
+                          &nbsp;
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
                     </div>
@@ -114,22 +144,28 @@
                         <div class="form-group">
                           <label for="name">Add Interviewers :</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
                       <div class="col-sm-4">
                         <div class="form-group">
                           <label for="name">Add candidates list per panel:</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
 
                       <div class="col-sm-4">
                         <div class="form-group">
-                          <label for="name">Add Candidates Reached Call:</label>
+                          <label for="name">Add Attended Candidate for Interview:</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
                     </div>
@@ -137,35 +173,58 @@
                     <div class="row">
                       <div class="col-sm-4">
                         <div class="form-group">
-                          <label for="name">Add Candidates Not Reached Call :</label>
+                          <label for="name">Add Absentees Candidate for Interview:</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <label for="name">Add Attended Candidate for Interview:</label>
-                          &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
                         </div>
                       </div>
 
                       <div class="col-sm-4">
                         <div class="form-group">
-                          <label for="name">Add Absentees Candidate for Interview:</label>
+                          <label for="name">Rejected candidate from interview :</label>
                           &nbsp;
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">ADD</button>
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
+
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <label for="name">Final Selected Candidates:</label>
+                          &nbsp;
+                          <label for="file-upload" class="custom-file-upload btn-info">ADD</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
+
+                        </div>
+                      </div>
+                    </div>
+                      
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <label for="name">Interview score cards :</label>
+                          &nbsp;
+                          <label for="file-upload" class="custom-file-upload btn-info">
+                            <i class="fa fa-cloud-upload"></i>Upload</label>
+                          <input type="file" class="form-control" name="awards-citations" id="awards-citations"
+                            placeholder="Awards & Citations">
+
                         </div>
                       </div>
                     </div>
                   </fieldset>
-                
+
                 </div>
                 <!-- card body end -->
 
                 <div class="card-footer">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal"
-                    [routerLink]="['/agrementletter']">Generate</button>
+                    [routerLink]="['/agrementletter']">ADD</button>
 
                   &nbsp;
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Reset</button>
