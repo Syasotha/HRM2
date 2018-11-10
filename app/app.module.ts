@@ -66,6 +66,9 @@ import { RejectApplicantsComponent } from './pages/employee/recruitment/intervie
 import { AddInterviewersComponent } from './pages/employee/recruitment/interview-history/Models/add-interviwers/add-interviewers.component';
 import { TableEditableComponent } from './pages/employee/recruitment/table-editable/table-editable.component';
 import { AddInterviewPaneldetailsComponent } from './pages/employee/recruitment/interview-history/add-interview-paneldetails/add-interview-paneldetails.component';
+import { ViewInternalExternalComponent } from './pages/employee/recruitment/interview-history/view-interview-historynew/Model/view-internal-external/view-internal-external.component';
+import { ViewInterviewHistoryInterviewdetailsComponent } from './pages/employee/recruitment/interview-history/view-interview-history-interviewdetails/view-interview-history-interviewdetails.component';
+import { ViewInterviewHistoryInterviewpanelComponent } from './pages/employee/recruitment/interview-history/view-interview-history-interviewpanel/view-interview-history-interviewpanel.component';
 
 @NgModule({
   declarations: [
@@ -128,7 +131,10 @@ import { AddInterviewPaneldetailsComponent } from './pages/employee/recruitment/
     RejectApplicantsComponent,
     AddInterviewersComponent,
     TableEditableComponent,
-    AddInterviewPaneldetailsComponent
+    AddInterviewPaneldetailsComponent,
+    ViewInternalExternalComponent,
+    ViewInterviewHistoryInterviewdetailsComponent,
+    ViewInterviewHistoryInterviewpanelComponent
   ],
   imports: [
     BrowserModule,
